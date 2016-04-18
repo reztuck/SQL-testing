@@ -1,5 +1,5 @@
 create table Store (
-    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    id INTEGER PRIMARY KEY autoincrement,
     name text, 
     quantity integer, 
     price integer, 
@@ -22,10 +22,6 @@ insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("QZ777", 2,
 insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Tranquil", 1, 220,310,"Yafung");
 insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Blue Breeze", 3, 175,265,"Emily Productions");
 
-Select name as Model, sale_price as "Sale Price", (sale_price - price) as Profit from store group by upper(name);
+Select id as "Item Number", name as Model, sale_price as "Sale Price", (sale_price - price) as Profit from store order by sale_price;
 
 Select SUM(sale_price-price) as "Total Projected Profit on Current Inventory" from store
-
-
-
-
