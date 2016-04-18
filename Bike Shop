@@ -1,0 +1,31 @@
+create table Store (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    name text, 
+    quantity integer, 
+    price integer, 
+    sale_price integer, 
+    maker text);
+
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Road Runner", 4, 200,285,"Blaze");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Blue Storm", 4, 200,325,"Tuck Blue");
+insert into store (NAME,QUANTITY,PRICE,SALE_PRICE,MAKER) VALUES ("eMster", 2,750,1095,"Emily Producutions");
+insert into store (name, quantity, price, SALE_PRICE, maker) values ("SeaRyder", 4, 425, 625,"Wave Studios");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Jet Beam", 7, 175,225,"Tuck Blue");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Star Burst", 3, 75,145,"Emily Productions");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Low Riderz", 2, 200,325,"Wave Studios");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Ninja", 3, 75,155,"Tuck Blue");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("China Cruiser", 2, 175,255,"Yafung");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Fire Line", 1, 125,195,"Tuck Blue");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("QZ377", 2, 990,1490,"Urban Cruzers");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("QZ577", 2, 1490,1990,"Urban Cruzers");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("QZ777", 2, 2300,3095,"Urban Cruzers");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Tranquil", 1, 220,310,"Yafung");
+insert into store (NAME, QUANTITY, PRICE, SALE_PRICE, MAKER) values ("Blue Breeze", 3, 175,265,"Emily Productions");
+
+Select name as Model, sale_price as "Sale Price", (sale_price - price) as Profit from store group by upper(name);
+
+Select SUM(sale_price-price) as "Total Projected Profit on Current Inventory" from store
+
+
+
+
